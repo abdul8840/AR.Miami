@@ -98,11 +98,14 @@ const FAQQues = () => {
       {/* Modal for Answer */}
       {isModalOpen && selectedQuestion && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 bg-opacity-50 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm"
           onClick={closeModal}
         >
           <div
-            className="bg-white/90 backdrop-blur-lg rounded-lg !p-8 max-w-2xl w-full !mx-4 relative transform transition-all duration-300 scale-95 hover:scale-100"
+            className="bg-white/90 backdrop-blur-lg rounded-lg !p-8 max-w-2xl w-full !mx-4 relative transform transition-all duration-300 ease-out"
+            style={{
+              animation: "modalFadeIn 0.3s ease-out",
+            }}
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -131,6 +134,22 @@ const FAQQues = () => {
           </div>
         </div>
       )}
+
+      {/* Add CSS for Modal Animation */}
+      <style>
+        {`
+          @keyframes modalFadeIn {
+            0% {
+              opacity: 0;
+              transform: scale(0.5);
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+        `}
+      </style>
     </div>
   );
 };

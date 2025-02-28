@@ -134,7 +134,11 @@ const OurTeam = () => {
           className="fixed inset-0 backdrop-blur-sm bg-black/30 flex items-center justify-center z-50"
           onClick={handleBackgroundClick}
         >
-          <div className="bg-white !p-6 sm:!p-8 rounded-lg shadow-lg max-w-md w-full relative">
+          <div className="bg-white !p-6 sm:!p-8 rounded-lg shadow-lg max-w-md w-full relative"
+            style={{
+              animation: "modalFadeIn 0.3s ease-out",
+            }}
+          >
             {/* Close Button Inside Modal */}
             <button
               className="absolute top-4 right-4 text-orange-500 hover:text-orange-600 cursor-pointer"
@@ -158,6 +162,22 @@ const OurTeam = () => {
           </div>
         </div>
       )}
+
+      {/* Add CSS for Modal Animation */}
+      <style>
+        {`
+          @keyframes modalFadeIn {
+            0% {
+              opacity: 0;
+              transform: scale(0.5);
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+        `}
+      </style>
     </section>
   );
 };
