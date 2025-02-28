@@ -32,6 +32,12 @@ const Header = () => {
     setIsServicesExpanded(!isServicesExpanded);
   };
 
+  // Close mobile menu when a navlink is clicked
+  const handleNavLinkClick = () => {
+    setIsMenuOpen(false);
+    setIsServicesExpanded(false); // Also close the services dropdown if open
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -153,10 +159,7 @@ const Header = () => {
                 {/* Services Dropdown Mega Menu */}
                 {link.dropdown && isServicesHovered && (
                   <div
-                    className="absolute top-full left-1/2 transform -translate-x-1/2 w-[600px] bg-gray-50 shadow-lg rounded-lg mt-2 !p-4 grid grid-cols-2 gap-4"
-                    style={{
-                      left: `calc(50% - ${servicesLinkRef.current?.offsetWidth / 2}px)`, // Center the mega menu
-                    }}
+                    className="absolute top-full left-0 w-[600px] bg-gray-50 shadow-lg rounded-lg mt-2 !p-4 grid grid-cols-2 gap-4"
                   >
                     {servicesDropdown.map((service) => (
                       <div key={service.id} className="flex items-start space-x-4 p-2 hover:bg-gray-100 rounded-lg">
@@ -189,7 +192,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center justify-center lg:hidden !mr-10 ">
+          <div className="flex items-center justify-center lg:hidden ">
             <button onClick={toggleMenu} className="text-orange-500 focus:outline-none">
               <svg
                 className="w-8 h-8"
@@ -225,7 +228,7 @@ const Header = () => {
           }`}
         >
           {/* Close Button */}
-          <div className="absolute top-4 right-4 !mr-10">
+          <div className="absolute top-4 right-4 ">
             <button onClick={toggleMenu} className="text-orange-500 focus:outline-none">
               <svg
                 className="w-8 h-8"
@@ -245,17 +248,17 @@ const Header = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex flex-col items-center justify-center h-full space-y-6 p-4">
+          <div className="flex flex-col items-start h-full !space-y-2 !px-6 !py-3 !mt-[90px] overflow-y-auto">
             {navLinks.map((link) => (
-              <div key={link.id} className="w-full text-center">
+              <div key={link.id} className="w-full border-b border-gray-200">
                 {link.dropdown ? (
                   <div>
                     <button
                       onClick={toggleServicesDropdown}
-                      className={`px-3 py-2 text-lg font-medium flex items-center justify-center space-x-1 w-full relative ${
+                      className={`!px-3 !py-2 text-lg font-medium flex items-center justify-between w-full h-full relative ${
                         activeLink === link.id
-                          ? "text-[#4c6d66]"
-                          : "text-gray-500 hover:text-[#4c6d66]"
+                          ? "text-orange-500"
+                          : "text-gray-800 hover:text-orange-500"
                       }`}
                     >
                       <span>{link.label}</span>
@@ -275,26 +278,24 @@ const Header = () => {
                           d="M19 9l-7 7-7-7"
                         />
                       </svg>
-                      {/* Sliding Underline */}
-                      <span
-                        className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#4c6d66] transform origin-left transition-transform duration-300 ${
-                          activeLink === link.id ? "scale-x-100" : "scale-x-0"
-                        }`}
-                      ></span>
                     </button>
                     <div
                       className={`overflow-hidden transition-all duration-300 ${
-                        isServicesExpanded ? "max-h-96" : "max-h-0"
+                        isServicesExpanded ? "max-h-[500px]" : "max-h-0"
                       }`}
                     >
-                      <div className="mt-2 space-y-4 bg-gray-50">
+                      <div className="!space-y-2 !pl-6">
                         {servicesDropdown.map((service) => (
-                          <div key={service.id} className="p-2">
+                          <div key={service.id} className="pt-2">
                             <h3 className="font-medium text-[#4c6d66]">{service.label}</h3>
-                            <ul className="mt-2 space-y-1 pl-6">
+                            <ul className="mt-2 !space-y-2">
                               {service.subServices.map((subService, index) => (
                                 <li key={index} className="text-sm text-gray-500">
-                                  <Link to={subService.path} className="hover:text-orange-500">
+                                  <Link
+                                    to={subService.path}
+                                    className="hover:text-orange-500"
+                                    onClick={handleNavLinkClick}
+                                  >
                                     {subService.label}
                                   </Link>
                                 </li>
@@ -308,24 +309,19 @@ const Header = () => {
                 ) : (
                   <Link
                     to={link.path}
-                    className={`px-3 py-2 text-lg font-medium relative ${
+                    className={`!px-3 !py-4 text-lg font-medium relative block ${
                       activeLink === link.id
-                        ? "text-[#4c6d66]"
-                        : "text-gray-500 hover:text-[#4c6d66]"
+                        ? "text-orange-500"
+                        : "text-gray-800 hover:text-orange-500"
                     }`}
+                    onClick={handleNavLinkClick}
                   >
                     {link.label}
-                    {/* Sliding Underline */}
-                    <span
-                      className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#4c6d66] transform origin-left transition-transform duration-300 ${
-                        activeLink === link.id ? "scale-x-100" : "scale-x-0"
-                      }`}
-                    ></span>
                   </Link>
                 )}
               </div>
             ))}
-            <button className="bg-[#4c6d66] text-white px-6 py-3 rounded-md hover:bg-[#3a524d] transition-colors mt-6">
+            <button className="bg-orange-500 text-white !px-6 !py-3 rounded-md hover:bg-orange-700 transition-colors !mt-6">
               Get Free Quotes
             </button>
           </div>

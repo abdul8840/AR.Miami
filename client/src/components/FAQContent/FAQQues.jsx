@@ -88,7 +88,7 @@ const FAQQues = () => {
                 onClick={() => handleQuestionClick(index)}
                 className="text-gray-600 hover:text-orange-500 transition-all transform hover:scale-110"
               >
-                <FaEye className="w-6 h-6 text-orange-500" />
+                <FaEye className="w-6 h-6 text-orange-500 cursor-pointer" />
               </button>
             </div>
           ))}
@@ -107,7 +107,7 @@ const FAQQues = () => {
           >
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 text-orange-500 hover:text-orange-700 transition-all transform hover:scale-110"
+              className="absolute top-4 right-4 text-orange-500 hover:text-orange-700 transition-all transform hover:scale-110 cursor-pointer"
             >
               <svg
                 className="w-6 h-6"
