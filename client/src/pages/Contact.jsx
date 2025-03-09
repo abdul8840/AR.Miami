@@ -1,12 +1,13 @@
 import React from 'react'
-import ContactHero from '../components/ContactContent/ContactHero'
 import ContactForm from '../components/ContactContent/ContactForm'
 import ContactLocation from '../components/ContactContent/ContactLocation'
+import Hero from '../components/Others/Hero'
+import { contactHero } from '../assets/data/heroData'
 
 const Contact = () => {
   return (
     <div className=''>
-      <ContactHero />
+      <Hero contactHero={contactHero} />
       <ContactForm />
       <ContactLocation />
     </div>

@@ -1,11 +1,12 @@
 import React from 'react'
-import FAQHero from '../components/FAQContent/FAQHero'
 import FAQQues from '../components/FAQContent/FAQQues'
+import { faqHero } from '../assets/data/heroData'
+import Hero from '../components/Others/Hero'
 
 const FAQ = () => {
   return (
     <div>
-      <FAQHero />
+      <Hero faqHero={faqHero} />
       <FAQQues />
     </div>
   )
