@@ -26,7 +26,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 !mb-8">
           {/* First Column: Logo, Description, and Social Media Icons */}
           <div className="!space-y-4">
-            <h2 className="text-2xl font-bold text-orange-500">AR.Miami</h2>
+            <h2 className="text-2xl font-bold text-[#023E8A]">AR.Miami</h2>
             <p className="text-white">
               Your trusted partner for construction, remodeling, and property management services.
             </p>
@@ -35,7 +35,7 @@ const Footer = () => {
                 to="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-orange-500 transition-all transform hover:scale-110"
+                className="text-white hover:text-[#023E8A] transition-all transform hover:scale-110"
               >
                 <FaFacebook className="w-6 h-6" />
               </Link>
@@ -43,7 +43,7 @@ const Footer = () => {
                 to="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-orange-500 transition-all transform hover:scale-110"
+                className="text-white hover:text-[#023E8A] transition-all transform hover:scale-110"
               >
                 <FaTwitter className="w-6 h-6" />
               </Link>
@@ -51,7 +51,7 @@ const Footer = () => {
                 to="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-orange-500 transition-all transform hover:scale-110"
+                className="text-white hover:text-[#023E8A] transition-all transform hover:scale-110"
               >
                 <FaInstagram className="w-6 h-6" />
               </Link>
@@ -59,7 +59,7 @@ const Footer = () => {
                 to="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-orange-500 transition-all transform hover:scale-110"
+                className="text-white hover:text-[#023E8A] transition-all transform hover:scale-110"
               >
                 <FaLinkedin className="w-6 h-6" />
               </Link>
@@ -68,42 +68,42 @@ const Footer = () => {
 
           {/* Second Column: Services */}
           <div className="!space-y-4">
-            <h3 className="text-xl font-semibold text-orange-500">Services</h3>
-            <span className="block w-[100px] h-[4px] bg-orange-500 !my-3"></span>
+            <h3 className="text-xl font-semibold text-[#023E8A]">Services</h3>
+            <span className="block w-[100px] h-[4px] bg-[#023E8A] !my-3"></span>
             <ul className="!space-y-2">
               <li>
                 <Link
                   to="/services/roof-to-roof"
-                  className="text-white hover:text-orange-500 transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-[#023E8A] transition-all flex items-center !space-x-2"
                 >
-                  <FaHammer className="w-4 h-4 text-orange-500" />
+                  <FaHammer className="w-4 h-4 text-[#023E8A]" />
                   <span>Roof-to-Roof Construction</span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/services/property-management"
-                  className="text-white hover:text-orange-500 transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-[#023E8A] transition-all flex items-center !space-x-2"
                 >
-                  <FaBuilding className="w-4 h-4 text-orange-500" />
+                  <FaBuilding className="w-4 h-4 text-[#023E8A]" />
                   <span>Property Management</span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/services/interior-design"
-                  className="text-white hover:text-orange-500 transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-[#023E8A] transition-all flex items-center !space-x-2"
                 >
-                  <FaPaintRoller className="w-4 h-4 text-orange-500" />
+                  <FaPaintRoller className="w-4 h-4 text-[#023E8A]" />
                   <span>Interior Design & Remodeling</span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/services/house-remodeling"
-                  className="text-white hover:text-orange-500 transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-[#023E8A] transition-all flex items-center !space-x-2"
                 >
-                  <FaHome className="w-4 h-4 text-orange-500" />
+                  <FaHome className="w-4 h-4 text-[#023E8A]" />
                   <span>House Remodeling & Renovations</span>
                 </Link>
               </li>
@@ -112,42 +112,42 @@ const Footer = () => {
 
           {/* Third Column: Important Links */}
           <div className="!space-y-4">
-            <h3 className="text-xl font-semibold text-orange-500">Important Links</h3>
-            <span className="block w-[100px] h-[4px] bg-orange-500 !my-3"></span>
+            <h3 className="text-xl font-semibold text-[#023E8A]">Important Links</h3>
+            <span className="block w-[100px] h-[4px] bg-[#023E8A] !my-3"></span>
             <ul className="!space-y-2">
               <li>
                 <Link
                   to="/privacy-policy"
-                  className="text-white hover:text-orange-500 transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-[#023E8A] transition-all flex items-center !space-x-2"
                 >
-                  <FaShieldAlt className="w-4 h-4 text-orange-500" />
+                  <FaShieldAlt className="w-4 h-4 text-[#023E8A]" />
                   <span>Privacy Policy</span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/terms-conditions"
-                  className="text-white hover:text-orange-500 transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-[#023E8A] transition-all flex items-center !space-x-2"
                 >
-                  <FaFileContract className="w-4 h-4 text-orange-500" />
+                  <FaFileContract className="w-4 h-4 text-[#023E8A]" />
                   <span>Terms & Conditions</span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/faq"
-                  className="text-white hover:text-orange-500 transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-[#023E8A] transition-all flex items-center !space-x-2"
                 >
-                  <FaQuestionCircle className="w-4 h-4 text-orange-500" />
+                  <FaQuestionCircle className="w-4 h-4 text-[#023E8A]" />
                   <span>FAQ</span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/blog"
-                  className="text-white hover:text-orange-500 transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-[#023E8A] transition-all flex items-center !space-x-2"
                 >
-                  <FaBlog className="w-4 h-4 text-orange-500" />
+                  <FaBlog className="w-4 h-4 text-[#023E8A]" />
                   <span>Blog</span>
                 </Link>
               </li>
@@ -156,19 +156,19 @@ const Footer = () => {
 
           {/* Fourth Column: Contact Info */}
           <div className="!space-y-4">
-            <h3 className="text-xl font-semibold text-orange-500">Contact Info</h3>
-            <span className="block w-[100px] h-[4px] bg-orange-500 !my-3"></span>
+            <h3 className="text-xl font-semibold text-[#023E8A]">Contact Info</h3>
+            <span className="block w-[100px] h-[4px] bg-[#023E8A] !my-3"></span>
             <ul className="!space-y-4">
               <li className="flex items-center !space-x-3">
-                <FaPhoneAlt className="text-orange-500 w-5 h-5" />
+                <FaPhoneAlt className="text-[#023E8A] w-5 h-5" />
                 <span className="text-white">+1 (123) 456-7890</span>
               </li>
               <li className="flex items-center !space-x-3">
-                <FaEnvelope className="text-orange-500 w-5 h-5" />
+                <FaEnvelope className="text-[#023E8A] w-5 h-5" />
                 <span className="text-white">contact@example.com</span>
               </li>
               <li className="flex items-center !space-x-3">
-                <FaMapMarkerAlt className="text-orange-500 w-5 h-5" />
+                <FaMapMarkerAlt className="text-[#023E8A] w-5 h-5" />
                 <span className="text-white">123 Main St, Cityville, USA</span>
               </li>
             </ul>
@@ -176,7 +176,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright Section */}
-        <div className="border-t border-orange-500 !pt-8 text-center">
+        <div className="border-t border-[#023E8A] !pt-8 text-center">
           <p className="text-white">
             &copy; {new Date().getFullYear()} AR.Miami. All rights reserved.
           </p>

@@ -27,16 +27,6 @@ const HomeServices = () => {
           'We solve from minor home renovation to big business structures, and we do so with enthusiasm and plenty of experience. We work with you to create one-of-a-kind solutions that meet your needs and budget. We are kitchen renovation, office enlargement, home makeover, all about quality, schedules, and exceeding expectations. We can help you build something great.',
       },
     ],
-    'Property Management': [
-      {
-        title: 'Residential Property Management',
-        description: 'Efficiently manage your residential properties with our comprehensive solutions.',
-      },
-      {
-        title: 'Commercial Property Management',
-        description: 'Efficiently manage your commercial properties with our expert services.',
-      },
-    ],
     'Interior Design & Remodeling': [
       {
         title: 'Interior Design',
@@ -57,6 +47,16 @@ const HomeServices = () => {
         description: 'Renovate your home with our expert services.',
       },
     ],
+    'Property Management': [
+      {
+        title: 'Residential Property Management',
+        description: 'Efficiently manage your residential properties with our comprehensive solutions.',
+      },
+      {
+        title: 'Commercial Property Management',
+        description: 'Efficiently manage your commercial properties with our expert services.',
+      },
+    ],
   };
 
   return (
@@ -64,9 +64,9 @@ const HomeServices = () => {
       <div className="container mx-auto !px-5 lg:px-0">
         <div className="text-center">
           <h2 className="text-2xl sm:text-4xl font-bold text-gray-800 !mb-4">
-            <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-orange-500 !mb-1 sm:!mb-2.5 !mr-1"></span>
+            <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#023E8A] !mb-1 sm:!mb-2.5 !mr-1"></span>
             Services We Offers
-            <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-orange-500 !mb-1 sm:!mb-2.5 !ml-1"></span>
+            <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#023E8A] !mb-1 sm:!mb-2.5 !ml-1"></span>
           </h2>
           <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-12">
             Explore our wide range of services tailored to meet your needs.
@@ -74,14 +74,14 @@ const HomeServices = () => {
         </div>
 
         {/* Tabs */}
-        <div className="hide-scrollbar overflow-x-auto whitespace-nowrap !my-8 sm:!my-12 border-2 border-solid border-orange-500 !p-1 rounded-lg text-center">
+        <div className="hide-scrollbar overflow-x-auto whitespace-nowrap !my-8 sm:!my-12 border-2 border-solid border-[#023E8A] !p-1 rounded-lg text-center">
           <div className="inline-flex gap-3 sm:gap-5">
             {Object.keys(services).map((service) => (
               <button
                 key={service}
                 onClick={() => setActiveTab(service)}
                 className={`!px-4 sm:!px-5 !py-2 sm:!py-3 rounded-lg text-sm sm:text-lg font-semibold transition-all duration-300 cursor-pointer ${activeTab === service
-                    ? 'bg-orange-500 text-white shadow-lg'
+                    ? 'bg-[#023E8A] text-white shadow-lg'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300 hover:shadow-md'
                   }`}
               >
@@ -102,7 +102,7 @@ const HomeServices = () => {
                 <div className="flex gap-3 items-center justify-center !mb-4">
                   <img
                     src={service.icon}
-                    className="w-12 h-12 filter-orange-500 transition-all duration-300"
+                    className="w-12 h-12 filter-[#023E8A] transition-all duration-300"
                     alt=""
                   />
                   <h3 className="text-md sm:text-lg font-bold text-gray-800 mb-3 sm:mb-4">
@@ -110,10 +110,10 @@ const HomeServices = () => {
                   </h3>
                 </div>
                 {/* Orange Line */}
-                <span className="block w-[100px] h-[4px] bg-orange-500 !my-8 transition-all duration-300"></span>
+                <span className="block w-[100px] h-[4px] bg-[#023E8A] !my-8 transition-all duration-300"></span>
                 <p className="text-sm sm:text-md text-gray-600 flex-grow">{service.description}</p>
                 {/* Learn More Button */}
-                <button className="border !border-b-4 !py-1 !px-2 border-orange-500 font-semibold !mt-4 rounded-lg cursor-pointer self-start">
+                <button className="border !border-b-4 !py-1 !px-2 border-[#023E8A] font-semibold !mt-4 rounded-lg cursor-pointer self-start">
                   Learn More
                 </button>
               </div>
@@ -144,7 +144,7 @@ const HomeServices = () => {
           left: 0;
           width: 100%;
           height: 0;
-          background: linear-gradient(to right, #fb910c, #f97316);
+          background: linear-gradient(to right, #0077B6, #023E8A);
           transition: height 0.5s ease;
           z-index: 1;
         }
@@ -170,12 +170,12 @@ const HomeServices = () => {
         }
 
         /* Icon Color Filter */
-        .filter-orange-500 {
+        .filter-[#023E8A] {
           filter: invert(70%) sepia(60%) saturate(1000%) hue-rotate(330deg) brightness(90%) contrast(90%);
         }
 
         /* Icon Color Change on Hover */
-        .card-container:hover .filter-orange-500 {
+        .card-container:hover .filter-[#023E8A] {
           filter: brightness(0) invert(1); /* Makes the icon white */
         }
       `}</style>

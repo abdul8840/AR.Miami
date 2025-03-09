@@ -86,9 +86,9 @@ const OurTeam = () => {
       <div className="container mx-auto !px-5 lg:px-0">
         <div className="text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 !mb-4">
-            <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-orange-500 !mb-2.5"></span>{' '}
+            <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#023E8A] !mb-2.5"></span>{' '}
             Our Team{' '}
-            <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-orange-500 !mb-2.5"></span>
+            <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#023E8A] !mb-2.5"></span>
           </h2>
           <p className="text-base sm:text-lg text-gray-600 !mb-8 sm:!mb-12">
             Meet Our Expert Team Members.
@@ -117,7 +117,7 @@ const OurTeam = () => {
 
                 {/* Eye Icon in Bottom-Right Corner */}
                 <div
-                  className="absolute bottom-4 right-4 text-orange-500 hover:text-orange-600 cursor-pointer"
+                  className="absolute bottom-4 right-4 text-[#023E8A] hover:text-[#03045E] cursor-pointer"
                   onClick={() => handleMemberClick(member)}
                 >
                   <FaEye className="w-6 h-6" />
@@ -141,7 +141,7 @@ const OurTeam = () => {
           >
             {/* Close Button Inside Modal */}
             <button
-              className="absolute top-4 right-4 text-orange-500 hover:text-orange-600 cursor-pointer"
+              className="absolute top-4 right-4 text-[#023E8A] hover:text-[#03045E] cursor-pointer"
               onClick={closePopup}
             >
               <FaTimes className="w-6 h-6" />

@@ -15,9 +15,9 @@ const Header = () => {
     { id: "home", label: "Home", path: "/" },
     { id: "about", label: "About", path: "/about" },
     { id: "services", label: "Services", path: "/services", dropdown: true },
-    { id: "project", label: "Project", path: "/project" },
+    { id: "project", label: "Project", path: "/projects" },
     { id: "faq", label: "FAQ", path: "/faq" },
-    { id: "blog", label: "Blog", path: "/blog" },
+    { id: "gallery", label: "Gallery", path: "/gallery" },
     { id: "contact", label: "Contact Us", path: "/contact" },
   ];
 
@@ -108,7 +108,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16 !mx-5 lg:mx-auto">
           {/* Logo */}
           <div className={`text-2xl sm:text-3xl font-bold ${
-            isScrolled ? "text-black" : "text-orange-500"
+            isScrolled ? "text-black" : "text-[#023E8A]"
           }`}>
             AR.Miami
           </div>
@@ -126,7 +126,7 @@ const Header = () => {
                 <Link
                   to={link.path}
                   className={`px-3 py-2 font-medium flex items-center space-x-1 !text-lg relative ${
-                    activeLink === link.id ? "text-orange-500" : isScrolled ? "text-black hover:text-orange-500" : "text-white hover:text-orange-500"
+                    activeLink === link.id ? "text-[#023E8A]" : isScrolled ? "text-black hover:text-[#023E8A]" : "text-white hover:text-[#023E8A]"
                   }`}
                 >
                   <span>{link.label}</span>
@@ -150,7 +150,7 @@ const Header = () => {
                   )}
                   {/* Sliding Underline */}
                   <span
-                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-orange-500 transform origin-left transition-transform duration-300 ${
+                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#023E8A] transform origin-left transition-transform duration-300 ${
                       activeLink === link.id ? "scale-x-100" : "scale-x-0"
                     }`}
                   ></span>
@@ -169,7 +169,7 @@ const Header = () => {
                           <ul className="mt-2 space-y-1">
                             {service.subServices.map((subService, index) => (
                               <li key={index} className="text-sm text-gray-500 mt-3">
-                                <Link to={subService.path} className="hover:text-orange-500">
+                                <Link to={subService.path} className="hover:text-[#023E8A]">
                                   * {subService.label}
                                 </Link>
                               </li>
@@ -186,14 +186,14 @@ const Header = () => {
 
           {/* Get Free Quotes Button */}
           <div className="hidden lg:block">
-            <button className="bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors cursor-pointer !py-2 !px-4">
+            <button className="bg-[#023E8A] text-white rounded-md hover:bg-[#03045E] transition-colors cursor-pointer !py-2 !px-4">
               Get Free Quotes
             </button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center justify-center lg:hidden ">
-            <button onClick={toggleMenu} className="text-orange-500 focus:outline-none">
+            <button onClick={toggleMenu} className="text-[#023E8A] focus:outline-none">
               <svg
                 className="w-8 h-8"
                 fill="none"
@@ -229,7 +229,7 @@ const Header = () => {
         >
           {/* Close Button */}
           <div className="absolute top-4 right-4 ">
-            <button onClick={toggleMenu} className="text-orange-500 focus:outline-none">
+            <button onClick={toggleMenu} className="text-[#023E8A] focus:outline-none">
               <svg
                 className="w-8 h-8"
                 fill="none"
@@ -257,8 +257,8 @@ const Header = () => {
                       onClick={toggleServicesDropdown}
                       className={`!px-3 !py-2 text-lg font-medium flex items-center justify-between w-full h-full relative ${
                         activeLink === link.id
-                          ? "text-orange-500"
-                          : "text-gray-800 hover:text-orange-500"
+                          ? "text-[#023E8A]"
+                          : "text-gray-800 hover:text-[#023E8A]"
                       }`}
                     >
                       <span>{link.label}</span>
@@ -293,7 +293,7 @@ const Header = () => {
                                 <li key={index} className="text-sm text-gray-500">
                                   <Link
                                     to={subService.path}
-                                    className="hover:text-orange-500"
+                                    className="hover:text-[#023E8A]"
                                     onClick={handleNavLinkClick}
                                   >
                                     {subService.label}
@@ -311,8 +311,8 @@ const Header = () => {
                     to={link.path}
                     className={`!px-3 !py-4 text-lg font-medium relative block ${
                       activeLink === link.id
-                        ? "text-orange-500"
-                        : "text-gray-800 hover:text-orange-500"
+                        ? "text-[#023E8A]"
+                        : "text-gray-800 hover:text-[#023E8A]"
                     }`}
                     onClick={handleNavLinkClick}
                   >
@@ -321,7 +321,7 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <button className="bg-orange-500 text-white !px-6 !py-3 rounded-md hover:bg-orange-700 transition-colors !mt-6">
+            <button className="bg-[#023E8A] text-white !px-6 !py-3 rounded-md hover:bg-orange-700 transition-colors !mt-6">
               Get Free Quotes
             </button>
           </div>

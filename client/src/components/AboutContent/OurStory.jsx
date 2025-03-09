@@ -61,10 +61,10 @@ const OurStory = () => {
             {/* Content */}
             <div className="lg:w-1/2 container !px-0 !py-10 lg:!p-5">
               <div className="max-w-[500px] !mx-auto ">
-                <h2 className="text-3xl sm:text-4xl font-bold text-orange-500 !mb-4">
+                <h2 className="text-3xl sm:text-4xl font-bold text-[#023E8A] !mb-4">
                   {section.title}
                 </h2>
-                <span className="inline-block w-[100px] h-[3px] bg-orange-500 !mb-2.5"></span>
+                <span className="inline-block w-[100px] h-[3px] bg-[#023E8A] !mb-2.5"></span>
                 {section.content.map((paragraph, i) => (
                   <p
                     key={i}
