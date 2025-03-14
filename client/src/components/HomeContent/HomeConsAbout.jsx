@@ -1,6 +1,6 @@
 import React from 'react';
-import InteriorDesignImage from '../../assets/images/homeInt.jpg'; // Replace with your image path
-import ExteriorDesignImage from '../../assets/images/houseExt.jpg'; // Replace with your image path
+import InteriorDesignImage from '../../assets/images/homeInt.jpg';
+import ExteriorDesignImage from '../../assets/images/houseExt.jpg';
 
 const HomeConsAbout = () => {
   return (

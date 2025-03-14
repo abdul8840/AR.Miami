@@ -1,7 +1,7 @@
 import React from 'react';
-import OurStoryImage1 from '../../assets/images/consTeam.jpg'; // Replace with your image path
-import OurStoryImage2 from '../../assets/images/values.jpg'; // Replace with your image path
-import OurStoryImage3 from '../../assets/images/mission.jpg'; // Replace with your image path
+import OurStoryImage1 from '../../assets/images/consTeam.jpg'; 
+import OurStoryImage2 from '../../assets/images/values.jpg'; 
+import OurStoryImage3 from '../../assets/images/mission.jpg'; 
 
 const OurStory = () => {
   const sections = [
