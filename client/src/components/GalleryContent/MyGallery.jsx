@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Banner2 from '../../assets/images/homeBanner2.jpg';
-import Banner3 from '../../assets/images/homeBanner3.jpg';
+import Banner2 from '../../assets/images/hBanner2.jpg';
+import Banner3 from '../../assets/images/hBanner3.jpg';
 import InteriorDesignImage from '../../assets/images/homeInt.jpg';
 import ExteriorDesignImage from '../../assets/images/houseExt.jpg';
 import OurStoryImage1 from '../../assets/images/consTeam.jpg';
