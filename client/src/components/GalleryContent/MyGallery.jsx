@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
-import Banner2 from '../../assets/images/hBanner2.jpg';
-import Banner3 from '../../assets/images/hBanner3.jpg';
-import InteriorDesignImage from '../../assets/images/homeInt.jpg';
-import ExteriorDesignImage from '../../assets/images/houseExt.jpg';
-import OurStoryImage1 from '../../assets/images/consTeam.jpg';
-import OurStoryImage2 from '../../assets/images/values.jpg';
-import OurStoryImage3 from '../../assets/images/mission.jpg';
+import Gallery1 from '../../assets/images/gallery1.jpg';
+import Gallery2 from '../../assets/images/gallery2.jpg';
+import Gallery3 from '../../assets/images/gallery3.jpg';
+import Gallery4 from '../../assets/images/gallery4.jpg';
+import Gallery5 from '../../assets/images/gallery5.jpg';
+import Gallery6 from '../../assets/images/gallery6.jpg';
+import Gallery7 from '../../assets/images/gallery7.jpg';
+import Gallery8 from '../../assets/images/gallery8.jpg';
+import Gallery9 from '../../assets/images/gallery9.jpg';
 
 const images = [
-  Banner2,
-  Banner3,
-  InteriorDesignImage,
-  ExteriorDesignImage,
-  OurStoryImage1,
-  OurStoryImage2,
-  OurStoryImage3,
+  Gallery1,
+  Gallery2,
+  Gallery3,
+  Gallery4,
+  Gallery5,
+  Gallery6,
+  Gallery7,
+  Gallery8,
+  Gallery9,
 ];
 
 const MyGallery = () => {

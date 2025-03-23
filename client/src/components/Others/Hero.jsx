@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Hero = ({projectHero, faqHero, contactHero, aboutHero, galleryHero}) => {
-  const heroContent = projectHero || faqHero || contactHero || aboutHero || galleryHero;
+const Hero = ({projectHero, faqHero, contactHero, aboutHero, galleryHero, RTRConsHero, HRRHero, IDRHero, PMHero}) => {
+  const heroContent = projectHero || faqHero || contactHero || aboutHero || galleryHero || RTRConsHero || HRRHero || IDRHero || PMHero;
   return (
     <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -15,10 +15,10 @@ const Hero = ({projectHero, faqHero, contactHero, aboutHero, galleryHero}) => {
 
       {/* Content */}
       <div className="relative z-10 text-center !px-5 lg:!px-0">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#023E8A] font-bold !mb-4">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl text-[#5c7c3b] font-bold !mb-4">
           {heroContent?.title}
-        </h1>
-        <p className="text-lg sm:text-xl md:text-2xl text-white max-w-2xl mx-auto">
+        </h2>
+        <p className="text-lg sm:text-xl md:text-2xl text-white max-w-5xl mx-auto">
           {heroContent?.description}
         </p>
       </div>

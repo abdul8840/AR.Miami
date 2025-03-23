@@ -8,6 +8,10 @@ import Footer from './components/Footer/Footer'
 import FAQ from './pages/FAQ'
 import Project from './pages/Project'
 import Gallery from './pages/Gallery'
+import RTRConstruction from './pages/services/RTRConstruction'
+import IDR from './pages/services/IDR'
+import HRR from './pages/services/HRR'
+import PM from './pages/services/PM'
 
 const App = () => {
   return (
@@ -20,6 +24,11 @@ const App = () => {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/projects" element={<Project />} />
         <Route path="/gallery" element={<Gallery />} />
+
+        <Route path="/services/roof-to-roof-construction" element={<RTRConstruction />} />
+        <Route path="/services/interior-design-and-Remodeling" element={<IDR />} />
+        <Route path="/services/house-remodeling-and-renovations" element={<HRR />} />
+        <Route path="/services/property-management" element={<PM />} />
       </Routes>
       <Footer />
     </BrowserRouter>

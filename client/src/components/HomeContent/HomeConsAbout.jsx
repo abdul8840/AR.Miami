@@ -19,8 +19,8 @@ const HomeConsAbout = () => {
 
           {/* Content */}
           <div className="lg:w-1/2">
-            <p className="text-md sm:text-xl text-[#023E8A] italic !mb-4">
-              <span className="inline-block w-[50px] h-[3px] bg-[#023E8A] !mb-1"></span> Design Your Space, Define Your Life.
+            <p className="text-md sm:text-xl text-[#5c7c3b] italic !mb-4">
+              <span className="inline-block w-[50px] h-[3px] bg-[#5c7c3b] !mb-1"></span> Design Your Space, Define Your Life.
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 !mb-4">
               Interior Design: Crafting Spaces That Inspire
@@ -34,8 +34,8 @@ const HomeConsAbout = () => {
             </p>
 
             <div className="flex gap-4">
-              <button className='broder border-2 !py-2 !px-4 border-[#023E8A] text-white font-semibold !mt-10 rounded-lg cursor-pointer bg-[#023E8A] hover:bg-white hover:text-black transition-all'>Call Now</button>
-              <button className='broder border-2 !py-2 !px-4 border-[#023E8A] font-semibold !mt-10 rounded-lg cursor-pointer hover:bg-[#023E8A] hover:text-white transition-all'>Get Free Quotes</button>
+              <button className='broder border-2 !py-2 !px-4 border-[#5c7c3b] text-white font-semibold !mt-10 rounded-lg cursor-pointer bg-[#5c7c3b] hover:bg-white hover:text-black transition-all'>Call Now</button>
+              <button className='broder border-2 !py-2 !px-4 border-[#5c7c3b] font-semibold !mt-10 rounded-lg cursor-pointer hover:bg-[#5c7c3b] hover:text-white transition-all'>Get Free Quotes</button>
             </div>
           </div>
         </div>
@@ -44,8 +44,8 @@ const HomeConsAbout = () => {
         <div className="flex flex-col lg:flex-row gap-8 items-center !mt-10">
           {/* Content */}
           <div className="lg:w-1/2 order-2 lg:order-1">
-            <p className="text-md sm:text-xl text-[#023E8A] italic !mb-4">
-              <span className="inline-block w-[30px] sm:w-[50px] h-[3px] bg-[#023E8A] !mb-1"></span> Where First Impressions Are Built to Last.
+            <p className="text-md sm:text-xl text-[#5c7c3b] italic !mb-4">
+              <span className="inline-block w-[30px] sm:w-[50px] h-[3px] bg-[#5c7c3b] !mb-1"></span> Where First Impressions Are Built to Last.
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 !mb-4">
               Exterior Design: Elevate Your Curb Appeal
@@ -57,8 +57,8 @@ const HomeConsAbout = () => {
               From roofing and siding to landscaping and entryways, we craft cohesive designs that blend style with structure. Our team uses high-quality materials and innovative techniques to ensure your property not only looks amazing but also withstands the elements for years to come.
             </p>
             <div className="flex gap-4">
-              <button className='broder border-2 !py-2 !px-4 border-[#023E8A] text-white font-semibold !mt-10 rounded-lg cursor-pointer bg-[#023E8A] hover:bg-white hover:text-black transition-all'>Call Now</button>
-              <button className='broder border-2 !py-2 !px-4 border-[#023E8A] font-semibold !mt-10 rounded-lg cursor-pointer hover:bg-[#023E8A] hover:text-white transition-all'>Get Free Quotes</button>
+              <button className='broder border-2 !py-2 !px-4 border-[#5c7c3b] text-white font-semibold !mt-10 rounded-lg cursor-pointer bg-[#5c7c3b] hover:bg-white hover:text-black transition-all'>Call Now</button>
+              <button className='broder border-2 !py-2 !px-4 border-[#5c7c3b] font-semibold !mt-10 rounded-lg cursor-pointer hover:bg-[#5c7c3b] hover:text-white transition-all'>Get Free Quotes</button>
             </div>
           </div>
 

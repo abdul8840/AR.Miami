@@ -86,9 +86,9 @@ const FAQQues = () => {
               <p className="text-lg font-medium text-gray-800">{faq.question}</p>
               <button
                 onClick={() => handleQuestionClick(index)}
-                className="text-gray-600 hover:text-[#023E8A] transition-all transform hover:scale-110"
+                className="text-gray-600 hover:text-[#5c7c3b] transition-all transform hover:scale-110"
               >
-                <FaEye className="w-6 h-6 text-[#023E8A] cursor-pointer" />
+                <FaEye className="w-6 h-6 text-[#5c7c3b] cursor-pointer" />
               </button>
             </div>
           ))}
@@ -110,7 +110,7 @@ const FAQQues = () => {
           >
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 text-[#023E8A] hover:text-[#03045E] transition-all transform hover:scale-110 cursor-pointer"
+              className="absolute top-4 right-4 text-[#5c7c3b] hover:text-[#2b4d2f] transition-all transform hover:scale-110 cursor-pointer"
             >
               <svg
                 className="w-6 h-6"

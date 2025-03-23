@@ -6,6 +6,8 @@ import Experience from '../components/Others/Experience';
 import OurTeam from '../components/AboutContent/OurTeam';
 import Hero from '../components/Others/Hero';
 import { aboutHero } from '../assets/data/heroData';
+import Certification from '../components/AboutContent/Certification';
+import Subscribe from '../components/Others/Subscribe';
 
 const About = () => {
   return (
@@ -24,10 +26,12 @@ const About = () => {
       </Helmet>
 
       <Hero aboutHero={aboutHero} />
+      <Certification />
       <AboutBanner />
       <Experience />
       <OurStory />
       <OurTeam />
+      <Subscribe />
     </div>
   );
 };

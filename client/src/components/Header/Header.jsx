@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Logo from '../../assets/images/artaLogo.png'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ const Header = () => {
   const navLinks = [
     { id: "home", label: "Home", path: "/" },
     { id: "about", label: "About", path: "/about" },
-    { id: "services", label: "Services", path: "/services", dropdown: true },
+    { id: "services", label: "Services", path: "#", dropdown: true },
     { id: "project", label: "Project", path: "/projects" },
     { id: "faq", label: "FAQ", path: "/faq" },
     { id: "gallery", label: "Gallery", path: "/gallery" },
@@ -57,20 +58,20 @@ const Header = () => {
       label: "Roof-to-Roof Construction",
       icon: "🏠",
       subServices: [
-        { label: "New Construction & Structural Development", path: "/services/roof-to-roof/new-construction" },
-        { label: "Roofing Installation & Repair", path: "/services/roof-to-roof/roofing-installation" },
-        { label: "Residential & Commercial Projects", path: "/services/roof-to-roof/residential-commercial" },
+        { label: "New Construction & Structural Development", path: "/services/roof-to-roof-construction" },
+        { label: "Roofing Installation & Repair", path: "/services/roof-to-roof-construction" },
+        { label: "Residential & Commercial Projects", path: "/services/roof-to-roof-construction" },
       ],
-      path: "/services/roof-to-roof",
+      path: "/services/roof-to-roof-construction",
     },
     {
       id: "property-management",
       label: "Property Management",
       icon: "🏢",
       subServices: [
-        { label: "Rental Property Maintenance", path: "/services/property-management/rental-maintenance" },
-        { label: "Inspections & Compliance", path: "/services/property-management/inspections-compliance" },
-        { label: "Tenant Services & Repairs", path: "/services/property-management/tenant-services" },
+        { label: "Rental Property Maintenance", path: "/services/property-management" },
+        { label: "Inspections & Compliance", path: "/services/property-management" },
+        { label: "Tenant Services & Repairs", path: "/services/property-management" },
       ],
       path: "/services/property-management",
     },
@@ -79,9 +80,9 @@ const Header = () => {
       label: "Interior Design & Remodeling",
       icon: "🎨",
       subServices: [
-        { label: "Kitchen & Bathroom Remodeling", path: "/services/interior-design/kitchen-bathroom" },
-        { label: "Flooring, Cabinets, & Lighting Design", path: "/services/interior-design/flooring-cabinets" },
-        { label: "Custom Interior & Smart Home Upgrades", path: "/services/interior-design/custom-interior" },
+        { label: "Kitchen & Bathroom Remodeling", path: "/services/interior-design-and-Remodeling" },
+        { label: "Flooring, Cabinets, & Lighting Design", path: "/services/interior-design-and-Remodeling" },
+        { label: "Custom Interior & Smart Home Upgrades", path: "/services/interior-design-and-Remodeling" },
       ],
       path: "/services/interior-design",
     },
@@ -90,9 +91,9 @@ const Header = () => {
       label: "House Remodeling & Renovations",
       icon: "🔨",
       subServices: [
-        { label: "Complete Home Renovations", path: "/services/house-remodeling/complete-renovations" },
-        { label: "Exterior & Interior Upgrades", path: "/services/house-remodeling/exterior-interior" },
-        { label: "Energy-Efficient & Smart Home Solutions", path: "/services/house-remodeling/smart-home" },
+        { label: "Complete Home Renovations", path: "/services/house-remodeling-and-renovations" },
+        { label: "Exterior & Interior Upgrades", path: "/services/house-remodeling-and-renovations" },
+        { label: "Energy-Efficient & Smart Home Solutions", path: "/services/house-remodeling-and-renovations" },
       ],
       path: "/services/house-remodeling",
     },
@@ -105,12 +106,12 @@ const Header = () => {
       }`}
     >
       <div className="container">
-        <div className="flex justify-between items-center h-16 !mx-5 lg:mx-auto">
+        <div className="flex justify-between items-center h-[100px] !mx-5 lg:mx-auto">
           {/* Logo */}
           <div className={`text-2xl sm:text-3xl font-bold ${
-            isScrolled ? "text-black" : "text-[#023E8A]"
+            isScrolled ? "text-black" : "text-[#5c7c3b]"
           }`}>
-            AR.Miami
+            <img src={Logo} className="w-[150px] !py-5" alt="" />
           </div>
 
           {/* Desktop Navigation */}
@@ -126,7 +127,7 @@ const Header = () => {
                 <Link
                   to={link.path}
                   className={`px-3 py-2 font-medium flex items-center space-x-1 !text-lg relative ${
-                    activeLink === link.id ? "text-[#023E8A]" : isScrolled ? "text-black hover:text-[#023E8A]" : "text-white hover:text-[#023E8A]"
+                    activeLink === link.id ? "text-[#5c7c3b]" : isScrolled ? "text-black hover:text-[#5c7c3b]" : "text-white hover:text-[#5c7c3b]"
                   }`}
                 >
                   <span>{link.label}</span>
@@ -150,7 +151,7 @@ const Header = () => {
                   )}
                   {/* Sliding Underline */}
                   <span
-                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#023E8A] transform origin-left transition-transform duration-300 ${
+                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#5c7c3b] transform origin-left transition-transform duration-300 ${
                       activeLink === link.id ? "scale-x-100" : "scale-x-0"
                     }`}
                   ></span>
@@ -169,7 +170,7 @@ const Header = () => {
                           <ul className="mt-2 space-y-1">
                             {service.subServices.map((subService, index) => (
                               <li key={index} className="text-sm text-gray-500 mt-3">
-                                <Link to={subService.path} className="hover:text-[#023E8A]">
+                                <Link to={subService.path} className="hover:text-[#5c7c3b]">
                                   * {subService.label}
                                 </Link>
                               </li>
@@ -186,14 +187,14 @@ const Header = () => {
 
           {/* Get Free Quotes Button */}
           <div className="hidden lg:block">
-            <button className="bg-[#023E8A] text-white rounded-md hover:bg-[#03045E] transition-colors cursor-pointer !py-2 !px-4">
+            <button className="bg-[#5c7c3b] text-white rounded-md hover:bg-[#072312] transition-colors cursor-pointer !py-2 !px-4">
               Get Free Quotes
             </button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center justify-center lg:hidden ">
-            <button onClick={toggleMenu} className="text-[#023E8A] focus:outline-none">
+            <button onClick={toggleMenu} className="text-[#5c7c3b] focus:outline-none">
               <svg
                 className="w-8 h-8"
                 fill="none"
@@ -229,7 +230,7 @@ const Header = () => {
         >
           {/* Close Button */}
           <div className="absolute top-4 right-4 ">
-            <button onClick={toggleMenu} className="text-[#023E8A] focus:outline-none">
+            <button onClick={toggleMenu} className="text-[#5c7c3b] focus:outline-none">
               <svg
                 className="w-8 h-8"
                 fill="none"
@@ -257,8 +258,8 @@ const Header = () => {
                       onClick={toggleServicesDropdown}
                       className={`!px-3 !py-2 text-lg font-medium flex items-center justify-between w-full h-full relative ${
                         activeLink === link.id
-                          ? "text-[#023E8A]"
-                          : "text-gray-800 hover:text-[#023E8A]"
+                          ? "text-[#5c7c3b]"
+                          : "text-gray-800 hover:text-[#5c7c3b]"
                       }`}
                     >
                       <span>{link.label}</span>
@@ -293,7 +294,7 @@ const Header = () => {
                                 <li key={index} className="text-sm text-gray-500">
                                   <Link
                                     to={subService.path}
-                                    className="hover:text-[#023E8A]"
+                                    className="hover:text-[#5c7c3b]"
                                     onClick={handleNavLinkClick}
                                   >
                                     {subService.label}
@@ -311,8 +312,8 @@ const Header = () => {
                     to={link.path}
                     className={`!px-3 !py-4 text-lg font-medium relative block ${
                       activeLink === link.id
-                        ? "text-[#023E8A]"
-                        : "text-gray-800 hover:text-[#023E8A]"
+                        ? "text-[#5c7c3b]"
+                        : "text-gray-800 hover:text-[#5c7c3b]"
                     }`}
                     onClick={handleNavLinkClick}
                   >
@@ -321,7 +322,7 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <button className="bg-[#023E8A] text-white !px-6 !py-3 rounded-md hover:bg-orange-700 transition-colors !mt-6">
+            <button className="bg-[#5c7c3b] text-white !px-6 !py-3 rounded-md hover:bg-orange-700 transition-colors !mt-6">
               Get Free Quotes
             </button>
           </div>
