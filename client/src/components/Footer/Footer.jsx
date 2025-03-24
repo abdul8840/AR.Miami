@@ -162,15 +162,15 @@ const Footer = () => {
             <ul className="!space-y-4">
               <li className="flex items-center !space-x-3">
                 <FaPhoneAlt className="text-[#5c7c3b] w-5 h-5" />
-                <span className="text-white">+1 (123) 456-7890</span>
+                <span className="text-white">+17862109819</span>
               </li>
               <li className="flex items-center !space-x-3">
                 <FaEnvelope className="text-[#5c7c3b] w-5 h-5" />
-                <span className="text-white">contact@example.com</span>
+                <span className="text-white">letsbuit@ar.miami</span>
               </li>
               <li className="flex items-center !space-x-3">
                 <FaMapMarkerAlt className="text-[#5c7c3b] w-5 h-5" />
-                <span className="text-white">123 Main St, Cityville, USA</span>
+                <span className="text-white">1717 N bayshore dr , #108 miami FL 33132</span>
               </li>
             </ul>
           </div>

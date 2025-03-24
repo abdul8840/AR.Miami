@@ -26,8 +26,8 @@ const About = () => {
       </Helmet>
 
       <Hero aboutHero={aboutHero} />
-      <Certification />
       <AboutBanner />
+      <Certification />
       <Experience />
       <OurStory />
       <OurTeam />
