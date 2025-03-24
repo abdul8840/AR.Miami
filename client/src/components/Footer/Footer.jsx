@@ -127,7 +127,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/terms-conditions"
+                  to="/terms-and-conditions"
                   className="text-white hover:text-[#5c7c3b] transition-all flex items-center !space-x-2"
                 >
                   <FaFileContract className="w-4 h-4 text-[#5c7c3b]" />

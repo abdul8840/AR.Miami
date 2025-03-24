@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Hero = ({projectHero, faqHero, contactHero, aboutHero, galleryHero, RTRConsHero, HRRHero, IDRHero, PMHero}) => {
-  const heroContent = projectHero || faqHero || contactHero || aboutHero || galleryHero || RTRConsHero || HRRHero || IDRHero || PMHero;
+const Hero = ({projectHero, faqHero, contactHero, aboutHero, galleryHero, RTRConsHero, HRRHero, IDRHero, PMHero, PrivacyHero, TermsHero}) => {
+  const heroContent = projectHero || faqHero || contactHero || aboutHero || galleryHero || RTRConsHero || HRRHero || IDRHero || PMHero || PrivacyHero || TermsHero;
   return (
     <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}

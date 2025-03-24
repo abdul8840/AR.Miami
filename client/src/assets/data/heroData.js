@@ -7,6 +7,7 @@ import RTRHeroImage from '../images/trtcons.jpg';
 import IDRHeroImage from '../images/idrimg.jpg'; 
 import HRRHeroImage from '../images/hrrimg.jpg'; 
 import PMHeroImage from '../images/pmimg.jpg'; 
+import PrivacyTermsHeroImage from '../images/bg.jpg'; 
 
 export const aboutHero = {
   id: 1,
@@ -72,4 +73,18 @@ export const PMHero = {
   description:
   "Ensure your investment remains in top condition with our professional property management services. We handle maintenance, repairs, and renovations, providing hassle-free solutions for homeowners, landlords, and real estate investors.",
   HeroImage: PMHeroImage,
+};
+export const PrivacyHero = {
+  id: 10,
+  title: "Privacy Policy",
+  description:
+  "Arta Jabbari's Privacy Policy outlines how we collect, use, and protect your personal information when you engage with our construction and interior design services in Miami. Learn about your data rights, our security measures, and how we handle project-related information to ensure complete transparency and compliance with privacy regulations.",
+  HeroImage: PrivacyTermsHeroImage,
+};
+export const TermsHero = {
+  id: 11,
+  title: "Terms & Conditions",
+  description:
+  "The official Terms & Conditions for Arta Jabbari's construction and interior design services in Miami. This document covers project agreements, payment schedules, warranties, cancellation policies, and liability terms to ensure clear expectations for both parties before commencing work on your dream space.",
+  HeroImage: PrivacyTermsHeroImage,
 };

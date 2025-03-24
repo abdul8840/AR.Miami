@@ -12,6 +12,8 @@ import RTRConstruction from './pages/services/RTRConstruction'
 import IDR from './pages/services/IDR'
 import HRR from './pages/services/HRR'
 import PM from './pages/services/PM'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsConditions from './pages/TermsConditions'
 
 const App = () => {
   return (
@@ -29,6 +31,9 @@ const App = () => {
         <Route path="/services/interior-design-and-Remodeling" element={<IDR />} />
         <Route path="/services/house-remodeling-and-renovations" element={<HRR />} />
         <Route path="/services/property-management" element={<PM />} />
+
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsConditions />} />
       </Routes>
       <Footer />
     </BrowserRouter>
