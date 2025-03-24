@@ -1,93 +1,89 @@
 import React from 'react';
-import ConstructionImage from '../../assets/images/conshero.jpg'; // Replace with your image path
+import InteriorDesignImage from '../../assets/images/homeInt.jpg';
+import ExteriorDesignImage from '../../assets/images/houseExt.jpg';
 import { Link } from 'react-router-dom';
 
-const HomeConsSteps = () => {
+const HomeConsAbout = () => {
   const phoneNumber = '+17862109819';
-  const steps = [
-    {
-      title: 'Step 1: Planning & Design',
-      description:
-        "We start with your vision. This phase includes site evaluation, blueprints, permits, and material selection. Careful planning ensures a smooth construction process, laying the groundwork for a successful project.",
-    },
-    {
-      title: 'Step 2: Site Preparation & Foundation',
-      description:
-        "Turning plans into action. We clear the land, level the site, and lay a sturdy foundation. This critical step ensures the structure’s strength and stability, setting the stage for the build.",
-    },
-    {
-      title: 'Step 3: Construction & Building',
-      description:
-        "Bringing your vision to life. From framing and roofing to electrical, plumbing, and interior work — we carefully build each element with precision and high-quality materials to create a lasting structure.",
-    },
-    {
-      title: 'Step 4: Finishing Touches & Handover',
-      description:
-        "The final reveal. We add the last details, including paint, fixtures, and landscaping, ensuring everything is polished and perfect. After a final inspection, we hand over the completed project, ready for you to enjoy!",
-    },
-  ];
-
   return (
     <section className="!py-12 md:!py-18 !bg-gray-100">
       <div className="container mx-auto !px-5 lg:px-0">
-        <div className="text-center !mb-18">
-          <h2 className="text-2xl sm:text-4xl font-bold text-gray-800 !mb-4">
-            <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#5c7c3b] !mb-1 sm:!mb-2.5 !mr-1"></span>
-            Construction Process
-            <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#5c7c3b] !mb-1 sm:!mb-2.5 !ml-1"></span>
-          </h2>
-          <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-12">
-            Follow our step-by-step process to bring your vision to life.
-          </p>
-        </div>
-
-        <div className="flex flex-col lg:flex-row gap-8">
-          <div className="lg:w-1/2">
+        {/* Interior Design Section */}
+        <div className="flex flex-col lg:flex-row gap-8 items-center mb-12">
+          {/* Image */}
+          <div className="lg:w-1/2 overflow-hidden">
             <img
-              src={ConstructionImage}
-              alt="Construction Process"
-              className="w-full h-[400px] sm:h-[550px] object-cover rounded-lg shadow-lg"
+              src={InteriorDesignImage}
+              alt="Interior Design"
+              className="w-full h-[400px] sm:h-[500px] object-cover  rounded-lg shadow-lg hover:scale-[1.1] transition-all"
             />
           </div>
 
-          <div className="lg:w-1/2 relative">
-            <div className="absolute left-4 sm:left-5 h-full w-1 bg-[#5c7c3b] block"></div>
+          {/* Content */}
+          <div className="lg:w-1/2">
+            <p className="text-md sm:text-xl text-[#5c7c3b] italic !mb-4">
+              <span className="inline-block w-[50px] h-[3px] bg-[#5c7c3b] !mb-1"></span> Design Your Space, Define Your Life.
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 !mb-4">
+              Interior Design: Crafting Spaces That Inspire
+            </h2>
 
-            <div className="space-y-16 flex flex-col gap-5">
-              {steps.map((step, index) => (
-                <div key={index} className="flex items-start relative">
-                  <div className="w-10 h-10 bg-[#5c7c3b] rounded-full flex items-center justify-center text-white font-bold z-10 mr-6 shadow-lg">
-                    0{index + 1}
-                  </div>
+            <p className="text-sm sm:text-[16px] text-gray-600">
+              Transform your interiors into breathtaking spaces that reflect your personality and style. Our expert interior design services blend functionality with elegance, creating custom designs tailored to your vision. Whether you’re dreaming of a modern kitchen, a cozy living room, or a luxurious office, we bring ideas to life with curated color palettes, premium materials, and thoughtful layouts.
+            </p>
+            <p className="text-sm sm:text-[16px] text-gray-600 !mt-4">
+              From concept to completion, we handle everything — lighting, furniture selection, décor, and finishes — ensuring every detail adds to the harmony of your home or commercial space. Let us create an environment you’ll love to live and work in.
+            </p>
 
-                  <div className="flex-1 !pl-4">
-                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3">
-                      {step.title}
-                    </h3>
-                    <p className="text-sm sm:text-md text-gray-600">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-              <div className="flex gap-4">
-                {/* Call Now Button */}
-                <a
-                  href={`tel:${phoneNumber}`}
-                  className="border-2 !py-2 !px-4 border-[#5c7c3b] text-white font-semibold !mt-10 rounded-lg cursor-pointer bg-[#5c7c3b] hover:bg-white hover:text-black transition-all"
-                >
-                  Call Now
-                </a>
+            <div className="flex gap-4">
+              {/* Call Now Button */}
+              <a
+                href={`tel:${phoneNumber}`}
+                className="border-2 !py-2 !px-4 border-[#5c7c3b] text-white font-semibold !mt-10 rounded-lg cursor-pointer bg-[#5c7c3b] hover:bg-white hover:text-black transition-all"
+              >
+                Call Now
+              </a>
 
-                {/* Get Free Quotes Button */}
-                <Link
-                  to="/contact" // Replace with your contact page route
-                  className="border-2 !py-2 !px-4 border-[#5c7c3b] font-semibold !mt-10 rounded-lg cursor-pointer hover:bg-[#5c7c3b] hover:text-white transition-all"
-                >
-                  Get Free Quotes
-                </Link>
-              </div>
+              {/* Get Free Quotes Button */}
+              <Link
+                to="/contact" // Replace with your contact page route
+                className="border-2 !py-2 !px-4 border-[#5c7c3b] font-semibold !mt-10 rounded-lg cursor-pointer hover:bg-[#5c7c3b] hover:text-white transition-all"
+              >
+                Get Free Quotes
+              </Link>
             </div>
+          </div>
+        </div>
+
+        {/* Exterior Design Section */}
+        <div className="flex flex-col lg:flex-row gap-8 items-center !mt-10">
+          {/* Content */}
+          <div className="lg:w-1/2 order-2 lg:order-1">
+            <p className="text-md sm:text-xl text-[#5c7c3b] italic !mb-4">
+              <span className="inline-block w-[30px] sm:w-[50px] h-[3px] bg-[#5c7c3b] !mb-1"></span> Where First Impressions Are Built to Last.
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 !mb-4">
+              Exterior Design: Elevate Your Curb Appeal
+            </h2>
+            <p className="text-sm sm:text-[16px] text-gray-600">
+              Your property’s exterior is its first impression — make it unforgettable. We specialize in designing stunning, durable exteriors that enhance your property’s beauty and value. Whether it’s a sleek modern facade, a charming traditional home, or a grand commercial building, we combine architectural expertise with aesthetic sensibility to create exteriors that stand out.
+            </p>
+            <p className="text-sm sm:text-[16px] text-gray-600 !mt-4">
+              From roofing and siding to landscaping and entryways, we craft cohesive designs that blend style with structure. Our team uses high-quality materials and innovative techniques to ensure your property not only looks amazing but also withstands the elements for years to come.
+            </p>
+            <div className="flex gap-4">
+              <button className='broder border-2 !py-2 !px-4 border-[#5c7c3b] text-white font-semibold !mt-10 rounded-lg cursor-pointer bg-[#5c7c3b] hover:bg-white hover:text-black transition-all'>Call Now</button>
+              <button className='broder border-2 !py-2 !px-4 border-[#5c7c3b] font-semibold !mt-10 rounded-lg cursor-pointer hover:bg-[#5c7c3b] hover:text-white transition-all'>Get Free Quotes</button>
+            </div>
+          </div>
+
+          {/* Image */}
+          <div className="lg:w-1/2 lg:order-2 overflow-hidden">
+            <img
+              src={ExteriorDesignImage}
+              alt="Exterior Design"
+              className="w-full h-[400px] sm:h-[500px] object-cover  rounded-lg shadow-lg hover:scale-[1.1] transition-all"
+            />
           </div>
         </div>
       </div>
@@ -95,4 +91,4 @@ const HomeConsSteps = () => {
   );
 };
 
-export default HomeConsSteps;
+export default HomeConsAbout;
