@@ -14,10 +14,12 @@ import HRR from './pages/services/HRR'
 import PM from './pages/services/PM'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsConditions from './pages/TermsConditions'
+import ScrollToTop from './components/Others/ScrollToTop'
 
 const App = () => {
   return (
     <BrowserRouter>
+    <ScrollToTop />
     <Header />
       <Routes>
         <Route path="/" element={<Home />} />

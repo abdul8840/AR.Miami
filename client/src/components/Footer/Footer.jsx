@@ -74,11 +74,29 @@ const Footer = () => {
             <ul className="!space-y-2">
               <li>
                 <Link
-                  to="/services/roof-to-roof"
+                  to="/services/roof-to-roof-construction"
                   className="text-white hover:text-[#5c7c3b] transition-all flex items-center !space-x-2"
                 >
                   <FaHammer className="w-4 h-4 text-[#5c7c3b]" />
                   <span>Roof-to-Roof Construction</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/house-remodeling-and-renovations"
+                  className="text-white hover:text-[#5c7c3b] transition-all flex items-center !space-x-2"
+                >
+                  <FaHome className="w-4 h-4 text-[#5c7c3b]" />
+                  <span>House Remodeling & Renovations</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/interior-design-and-Remodeling"
+                  className="text-white hover:text-[#5c7c3b] transition-all flex items-center !space-x-2"
+                >
+                  <FaPaintRoller className="w-4 h-4 text-[#5c7c3b]" />
+                  <span>Interior Design & Remodeling</span>
                 </Link>
               </li>
               <li>
@@ -88,24 +106,6 @@ const Footer = () => {
                 >
                   <FaBuilding className="w-4 h-4 text-[#5c7c3b]" />
                   <span>Property Management</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services/interior-design"
-                  className="text-white hover:text-[#5c7c3b] transition-all flex items-center !space-x-2"
-                >
-                  <FaPaintRoller className="w-4 h-4 text-[#5c7c3b]" />
-                  <span>Interior Design & Remodeling</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services/house-remodeling"
-                  className="text-white hover:text-[#5c7c3b] transition-all flex items-center !space-x-2"
-                >
-                  <FaHome className="w-4 h-4 text-[#5c7c3b]" />
-                  <span>House Remodeling & Renovations</span>
                 </Link>
               </li>
             </ul>
