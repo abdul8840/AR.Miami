@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Subscribe = () => {
+  const phoneNumber = '+17862109819';
   return (
     <div className="subbg !py-20 relative">
       {/* Background overlay */}
@@ -21,12 +23,20 @@ const Subscribe = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="w-full sm:w-auto border-2 !py-3 !px-6 border-[#5c7c3b] text-white font-semibold rounded-lg cursor-pointer bg-[#5c7c3b] hover:bg-white hover:text-[#5c7c3b] transition-all duration-300 transform hover:scale-105">
+            <a
+              href={`tel:${phoneNumber}`}
+              className="border-2 !py-2 !px-4 border-[#5c7c3b] text-white font-semibold !mt-10 rounded-lg cursor-pointer bg-[#5c7c3b] hover:bg-white hover:text-black transition-all"
+            >
               Call Now
-            </button>
-            <button className="w-full sm:w-auto border-2 !py-3 !px-6 border-[#5c7c3b] text-[#5c7c3b] font-semibold rounded-lg cursor-pointer hover:bg-[#5c7c3b] hover:text-white transition-all duration-300 transform hover:scale-105">
+            </a>
+
+            {/* Get Free Quotes Button */}
+            <Link
+              to="/contact" // Replace with your contact page route
+              className="border-2 !py-2 !px-4 border-[#5c7c3b] font-semibold !mt-10 rounded-lg cursor-pointer hover:bg-[#5c7c3b] hover:text-white transition-all"
+            >
               Get Free Quotes
-            </button>
+            </Link>
           </div>
         </div>
       </div>

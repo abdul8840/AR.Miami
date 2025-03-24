@@ -2,8 +2,10 @@ import React from 'react';
 import Banner1 from '../../assets/images/homeBanner1.jpg';
 import Banner2 from '../../assets/images/homeBanner2.jpg';
 import Banner3 from '../../assets/images/homeBanner3.jpg';
+import { Link } from 'react-router-dom';
 
 const HomeBanner = () => {
+  const phoneNumber = '+17862109819';
   return (
     <section className='!mt-[-100px] bg-gray-100 py-10 z-100'>
       <div className="container">
@@ -16,8 +18,21 @@ const HomeBanner = () => {
             <p className="text-lg text-gray-200font-semibold mb-2"><span className="inline-block w-[50px] h-[3px] bg-[#5c7c3b] !mb-1"></span> Your house is not just a house – it's where your dreams become a reality and memories are made. Our skilled builders, contractors, and designers go the extra mile to make your dreams a reality with professional workmanship and meticulous attention to detail.
             </p>
             <div className="flex gap-4">
-              <button className='broder border-2 !py-2 !px-4 border-[#5c7c3b] text-white font-semibold !mt-10 rounded-lg cursor-pointer bg-[#5c7c3b] hover:bg-white hover:text-black transition-all'>Call Now</button>
-              <button className='broder border-2 !py-2 !px-4 border-[#5c7c3b] font-semibold !mt-10 rounded-lg cursor-pointer hover:bg-[#5c7c3b] hover:text-white transition-all'>Get Free Quotes</button>
+              {/* Call Now Button */}
+              <a
+                href={`tel:${phoneNumber}`}
+                className="border-2 !py-2 !px-4 border-[#5c7c3b] text-white font-semibold !mt-10 rounded-lg cursor-pointer bg-[#5c7c3b] hover:bg-white hover:text-black transition-all"
+              >
+                Call Now
+              </a>
+
+              {/* Get Free Quotes Button */}
+              <Link
+                to="/contact" // Replace with your contact page route
+                className="border-2 !py-2 !px-4 border-[#5c7c3b] font-semibold !mt-10 rounded-lg cursor-pointer hover:bg-[#5c7c3b] hover:text-white transition-all"
+              >
+                Get Free Quotes
+              </Link>
             </div>
           </div>
 

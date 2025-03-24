@@ -67,7 +67,7 @@ const Certification = () => {
     <div className="bg-gray-50 !py-16 !px-4 sm:!px-6 lg:!px-8">
       <div className="container">
         <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 !mb-4"><span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#5c7c3b] !mb-2.5"></span> My Certifications <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#5c7c3b] !mb-2.5"></span></h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 !mb-4"><span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#5c7c3b] !mb-2.5"></span> Licenses and Certifications. <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#5c7c3b] !mb-2.5"></span></h2>
           <p className="text-base sm:text-lg text-gray-600 !mb-8 sm:!mb-12">
             Professional credentials that validate my expertise
           </p>

@@ -1,7 +1,9 @@
 import React from 'react';
 import AbtBanner from '../../assets/images/constructionTeam.jpg';
+import { Link } from 'react-router-dom';
 
 const AboutBanner = () => {
+  const phoneNumber = '+17862109819';
   return (
     <section className='!py-20 z-100'>
       <div className="container">
@@ -27,8 +29,21 @@ const AboutBanner = () => {
             We think every home should mirror its owner. So, we ensure each detail matches your taste making your space feel just right for you.
             </p>
             <div className="flex gap-4">
-              <button className='broder border-2 !py-2 !px-4 border-[#5c7c3b] text-white font-semibold !mt-10 rounded-lg cursor-pointer bg-[#5c7c3b] hover:bg-white hover:text-black transition-all'>Call Now</button>
-              <button className='broder border-2 !py-2 !px-4 border-[#5c7c3b] font-semibold !mt-10 rounded-lg cursor-pointer hover:bg-[#5c7c3b] hover:text-white transition-all'>Get Free Quotes</button>
+              {/* Call Now Button */}
+              <a
+                href={`tel:${phoneNumber}`}
+                className="border-2 !py-2 !px-4 border-[#5c7c3b] text-white font-semibold !mt-10 rounded-lg cursor-pointer bg-[#5c7c3b] hover:bg-white hover:text-black transition-all"
+              >
+                Call Now
+              </a>
+
+              {/* Get Free Quotes Button */}
+              <Link
+                to="/contact" // Replace with your contact page route
+                className="border-2 !py-2 !px-4 border-[#5c7c3b] font-semibold !mt-10 rounded-lg cursor-pointer hover:bg-[#5c7c3b] hover:text-white transition-all"
+              >
+                Get Free Quotes
+              </Link>
             </div>
           </div>
 

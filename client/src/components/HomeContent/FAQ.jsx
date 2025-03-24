@@ -6,28 +6,34 @@ import { GoArrowUpRight } from 'react-icons/go';
 
 const faqData = [
   {
-    question: 'What services does Generations Fix offer?',
-    answer: 'We provide a range of services, including smartphone, laptop, and POS system repairs, IT hardware solutions, networking services, website design, and digital marketing to help businesses grow.',
+    question: "What services does Arta Jabbari offer?",
+    answer:
+      "Arta Jabbari offers a wide range of services including Roof-to-Roof Construction, Property Management, Interior Design & Remodeling, and House Remodeling & Renovations.",
   },
   {
-    question: 'Where is Generations Fix located?',
-    answer: 'We are based in Miami and offer pickup and drop-off services for repairs, making it convenient for our customers.',
+    question: "How can I request a quote?",
+    answer:
+      "You can request a quote by visiting our website and filling out the contact form, or by calling us directly at +1 (123) 456-7890.",
   },
   {
-    question: 'Do you offer on-site repair services?',
-    answer: 'Yes! We offer on-site troubleshooting for IT hardware and networking services. For device repairs, we also provide pickup and drop-off services.',
+    question: "Do you provide free consultations?",
+    answer:
+      "Yes, we offer free consultations to discuss your project requirements and provide an estimate.",
   },
   {
-    question: 'What types of devices do you repair?',
-    answer: 'We repair smartphones, laptops, computers, tablets, POS systems, gaming consoles, printers, and other IT hardware.',
+    question: "Are your services available for both residential and commercial properties?",
+    answer:
+      "Yes, we cater to both residential and commercial properties, offering tailored solutions for each.",
   },
   {
-    question: 'What IT hardware services do you provide?',
-    answer: 'We offer hardware installation, troubleshooting, upgrades, server setup, data recovery, networking solutions, and structured cabling.',
+    question: "How long does a typical construction project take?",
+    answer:
+      "The duration of a project depends on its scope and complexity. We provide a timeline during the consultation phase.",
   },
   {
-    question: 'What web design services do you offer?',
-    answer: 'We design and develop custom websites, e-commerce stores, business websites, and portfolio sites tailored to your needs.',
+    question: "What materials do you use for construction?",
+    answer:
+      "We use high-quality, durable materials that meet industry standards and ensure long-lasting results.",
   },
 ];
 
@@ -74,7 +80,7 @@ const AccordionItem = ({ question, answer, isOpen, onToggle }) => {
   return (
     <div className="border rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out">
       <div
-        className="border-2 border-gray-300 rounded-xl !p-4 cursor-pointer flex justify-between items-center transition-all duration-300 ease-in-out"
+        className="border-2 border-[#5c7c3b] rounded-xl !p-4 cursor-pointer flex justify-between items-center transition-all duration-300 ease-in-out"
         onClick={onToggle}
       >
         <h3 className="text-lg font-semibold">{question}</h3>

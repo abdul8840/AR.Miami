@@ -65,15 +65,15 @@ const Header = () => {
       path: "/services/roof-to-roof-construction",
     },
     {
-      id: "property-management",
-      label: "Property Management",
-      icon: "🏢",
+      id: "house-remodeling",
+      label: "House Remodeling & Renovations",
+      icon: "🔨",
       subServices: [
-        { label: "Rental Property Maintenance", path: "/services/property-management" },
-        { label: "Inspections & Compliance", path: "/services/property-management" },
-        { label: "Tenant Services & Repairs", path: "/services/property-management" },
+        { label: "Complete Home Renovations", path: "/services/house-remodeling-and-renovations" },
+        { label: "Exterior & Interior Upgrades", path: "/services/house-remodeling-and-renovations" },
+        { label: "Energy-Efficient & Smart Home Solutions", path: "/services/house-remodeling-and-renovations" },
       ],
-      path: "/services/property-management",
+      path: "/services/house-remodeling",
     },
     {
       id: "interior-design",
@@ -87,30 +87,29 @@ const Header = () => {
       path: "/services/interior-design",
     },
     {
-      id: "house-remodeling",
-      label: "House Remodeling & Renovations",
-      icon: "🔨",
+      id: "property-management",
+      label: "Property Management",
+      icon: "🏢",
       subServices: [
-        { label: "Complete Home Renovations", path: "/services/house-remodeling-and-renovations" },
-        { label: "Exterior & Interior Upgrades", path: "/services/house-remodeling-and-renovations" },
-        { label: "Energy-Efficient & Smart Home Solutions", path: "/services/house-remodeling-and-renovations" },
+        { label: "Rental Property Maintenance", path: "/services/property-management" },
+        { label: "Inspections & Compliance", path: "/services/property-management" },
+        { label: "Tenant Services & Repairs", path: "/services/property-management" },
       ],
-      path: "/services/house-remodeling",
+      path: "/services/property-management",
     },
+    
   ];
 
   return (
     <header
-      className={`fixed w-full z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed w-full z-50 transition-colors duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        }`}
     >
       <div className="container">
         <div className="flex justify-between items-center h-[100px] !mx-5 lg:mx-auto">
           {/* Logo */}
-          <div className={`text-2xl sm:text-3xl font-bold ${
-            isScrolled ? "text-black" : "text-[#5c7c3b]"
-          }`}>
+          <div className={`text-2xl sm:text-3xl font-bold ${isScrolled ? "text-black" : "text-[#5c7c3b]"
+            }`}>
             <img src={Logo} className="w-[150px] !py-5" alt="" />
           </div>
 
@@ -126,16 +125,14 @@ const Header = () => {
               >
                 <Link
                   to={link.path}
-                  className={`px-3 py-2 font-medium flex items-center space-x-1 !text-lg relative ${
-                    activeLink === link.id ? "text-[#5c7c3b]" : isScrolled ? "text-black hover:text-[#5c7c3b]" : "text-white hover:text-[#5c7c3b]"
-                  }`}
+                  className={`px-3 py-2 font-medium flex items-center space-x-1 !text-lg relative ${activeLink === link.id ? "text-[#5c7c3b]" : isScrolled ? "text-black hover:text-[#5c7c3b]" : "text-white hover:text-[#5c7c3b]"
+                    }`}
                 >
                   <span>{link.label}</span>
                   {link.dropdown && (
                     <svg
-                      className={`w-4 h-4 transition-transform ${
-                        isServicesHovered ? "rotate-180" : ""
-                      }`}
+                      className={`w-4 h-4 transition-transform ${isServicesHovered ? "rotate-180" : ""
+                        }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -151,9 +148,8 @@ const Header = () => {
                   )}
                   {/* Sliding Underline */}
                   <span
-                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#5c7c3b] transform origin-left transition-transform duration-300 ${
-                      activeLink === link.id ? "scale-x-100" : "scale-x-0"
-                    }`}
+                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#5c7c3b] transform origin-left transition-transform duration-300 ${activeLink === link.id ? "scale-x-100" : "scale-x-0"
+                      }`}
                   ></span>
                 </Link>
 
@@ -187,9 +183,12 @@ const Header = () => {
 
           {/* Get Free Quotes Button */}
           <div className="hidden lg:block">
-            <button className="bg-[#5c7c3b] text-white rounded-md hover:bg-[#072312] transition-colors cursor-pointer !py-2 !px-4">
+            <Link
+              to="/contact" // Replace with your contact page route
+              className="bg-[#5c7c3b] text-white rounded-md hover:bg-[#072312] transition-colors cursor-pointer !py-2 !px-4"
+            >
               Get Free Quotes
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -224,9 +223,8 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`lg:hidden fixed inset-0 bg-white z-40 transform transition-transform duration-300 ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`lg:hidden fixed inset-0 bg-white z-40 transform transition-transform duration-300 ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           {/* Close Button */}
           <div className="absolute top-4 right-4 ">
@@ -256,17 +254,15 @@ const Header = () => {
                   <div>
                     <button
                       onClick={toggleServicesDropdown}
-                      className={`!px-3 !py-2 text-lg font-medium flex items-center justify-between w-full h-full relative ${
-                        activeLink === link.id
+                      className={`!px-3 !py-2 text-lg font-medium flex items-center justify-between w-full h-full relative ${activeLink === link.id
                           ? "text-[#5c7c3b]"
                           : "text-gray-800 hover:text-[#5c7c3b]"
-                      }`}
+                        }`}
                     >
                       <span>{link.label}</span>
                       <svg
-                        className={`w-4 h-4 transition-transform ${
-                          isServicesExpanded ? "rotate-180" : ""
-                        }`}
+                        className={`w-4 h-4 transition-transform ${isServicesExpanded ? "rotate-180" : ""
+                          }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -281,9 +277,8 @@ const Header = () => {
                       </svg>
                     </button>
                     <div
-                      className={`overflow-hidden transition-all duration-300 ${
-                        isServicesExpanded ? "max-h-[500px]" : "max-h-0"
-                      }`}
+                      className={`overflow-hidden transition-all duration-300 ${isServicesExpanded ? "max-h-[500px]" : "max-h-0"
+                        }`}
                     >
                       <div className="!space-y-2 !pl-6">
                         {servicesDropdown.map((service) => (
@@ -310,11 +305,10 @@ const Header = () => {
                 ) : (
                   <Link
                     to={link.path}
-                    className={`!px-3 !py-4 text-lg font-medium relative block ${
-                      activeLink === link.id
+                    className={`!px-3 !py-4 text-lg font-medium relative block ${activeLink === link.id
                         ? "text-[#5c7c3b]"
                         : "text-gray-800 hover:text-[#5c7c3b]"
-                    }`}
+                      }`}
                     onClick={handleNavLinkClick}
                   >
                     {link.label}
@@ -322,9 +316,12 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <button className="bg-[#5c7c3b] text-white !px-6 !py-3 rounded-md hover:bg-orange-700 transition-colors !mt-6">
+            <Link
+              to="/contact" // Replace with your contact page route
+              className="bg-[#5c7c3b] text-white rounded-md hover:bg-[#072312] transition-colors cursor-pointer !py-2 !px-4"
+            >
               Get Free Quotes
-            </button>
+            </Link>
           </div>
         </div>
       </div>
