@@ -11,7 +11,7 @@ import HomePageHero from '../components/HomeContent/HomePageHero'
 const Home = () => {
   return (
     <div>
-      <HomePageHero />
+      <HomePageHero isMenuOpen={isMenuOpen} />
       <HomeHero />
       <HomeBanner />
       <HomeConsAbout />
