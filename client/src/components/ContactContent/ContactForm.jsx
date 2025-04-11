@@ -31,7 +31,7 @@ const ContactForm = () => {
                 <FaEnvelope className="text-white w-6 h-6" />
               </div>
               <div className="">
-                <p className="text-gray-600 text-lg">letsbuit@ar.miami</p>
+                <p className="text-gray-600 text-lg">Arta@ar.miami</p>
               </div>
             </div>
             <div className="flex items-center gap-6">

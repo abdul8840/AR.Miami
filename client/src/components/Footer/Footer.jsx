@@ -166,7 +166,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center !space-x-3">
                 <FaEnvelope className="text-[#5c7c3b] w-5 h-5" />
-                <span className="text-white">letsbuit@ar.miami</span>
+                <span className="text-white">Arta@ar.miami</span>
               </li>
               <li className="flex items-center !space-x-3">
                 <FaMapMarkerAlt className="text-[#5c7c3b] w-5 h-5" />
