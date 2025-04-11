@@ -8,7 +8,7 @@ import FAQ from '../components/HomeContent/FAQ'
 import Subscribe from '../components/Others/Subscribe'
 import HomePageHero from '../components/HomeContent/HomePageHero'
 
-const Home = () => {
+const Home = ({isMenuOpen}) => {
   return (
     <div>
       <HomePageHero isMenuOpen={isMenuOpen} />

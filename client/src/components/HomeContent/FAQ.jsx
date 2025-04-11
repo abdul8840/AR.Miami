@@ -6,9 +6,9 @@ import { GoArrowUpRight } from 'react-icons/go';
 
 const faqData = [
   {
-    question: "What services does Arta Jabbari offer?",
+    question: "What services does Advance Construction & Remodeling offer?",
     answer:
-      "Arta Jabbari offers a wide range of services including Roof-to-Roof Construction, Property Management, Interior Design & Remodeling, and House Remodeling & Renovations.",
+      "Advance Construction & Remodeling offers a wide range of services including Roof-to-Roof Construction, Property Management, Interior Design & Remodeling, and House Remodeling & Renovations.",
   },
   {
     question: "How can I request a quote?",

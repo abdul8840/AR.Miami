@@ -8,9 +8,9 @@ const FAQQues = () => {
   // FAQ Data
   const faqData = [
     {
-      question: "What services does AR.Miami offer?",
+      question: "What services does Advance Construction & Remodeling offer?",
       answer:
-        "AR.Miami offers a wide range of services including Roof-to-Roof Construction, Property Management, Interior Design & Remodeling, and House Remodeling & Renovations.",
+        "Advance Construction & Remodeling offers a wide range of services including Roof-to-Roof Construction, Property Management, Interior Design & Remodeling, and House Remodeling & Renovations.",
     },
     {
       question: "How can I request a quote?",
