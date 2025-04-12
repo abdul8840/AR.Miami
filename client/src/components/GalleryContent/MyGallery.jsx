@@ -4,7 +4,7 @@ import PBedroom1 from '../../assets/images/interiorImg/pinkRoom/IMG_4753.jpg';
 import PBedroom2 from '../../assets/images/interiorImg/pinkRoom/IMG_4754.jpg';
 import PBedroom3 from '../../assets/images/interiorImg/pinkRoom/IMG_4750.jpg';
 import PBedroom4 from '../../assets/images/interiorImg/pinkRoom/IMG_4751.jpg';
-import PBedroom5 from '../../assets/images/interiorImg/pinkRoom/IMG_4723.jpg';
+import PBedroom5 from '../../assets/images/interiorImg/pinkRoom/IMG_4729.jpg';
 
 import BBedroom1 from '../../assets/images/interiorImg/blackBedroom/IMG_0029.jpg';
 import BBedroom2 from '../../assets/images/interiorImg/blackBedroom/IMG_0035.jpg';
