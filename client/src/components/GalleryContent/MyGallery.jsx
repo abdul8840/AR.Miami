@@ -39,7 +39,7 @@ import WKitchen5 from '../../assets/images/interiorImg/whiteKitchen/IMG_0976.jpg
 import WAlmira1 from '../../assets/images/interiorImg/whiteAlmira/IMG_0987.jpg';
 import WAlmira2 from '../../assets/images/interiorImg/whiteAlmira/IMG_0988.jpg';
 
-import Outer1 from '../../assets/images/interiorImg/outer/IMG_4759.jpg';
+import Outer1 from '../../assets/images/interiorImg/outer/IMG_4761.jpg';
 import Outer2 from '../../assets/images/interiorImg/outer/IMG_4768.jpg';
 import Outer3 from '../../assets/images/interiorImg/outer/IMG_4780.jpg';
 import Outer4 from '../../assets/images/interiorImg/outer/IMG_4790.jpg';
