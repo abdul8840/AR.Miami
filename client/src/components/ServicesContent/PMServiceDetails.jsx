@@ -539,7 +539,7 @@ const PMServiceDetails = () => {
                 </motion.div>
                 <motion.div
                   variants={cardVariants}
-                  className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#5c7c3b]  "
+                  className="bg-white !p-6 rounded-xl shadow-lg border-t-4 border-[#5c7c3b]  "
                 >
                   <h4 className="text-xl font-semibold !mb-4 text-[#5c7c3b]  ">Repair Services</h4>
                   <ul className="!space-y-3  ">

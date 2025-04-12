@@ -116,7 +116,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
                       ? "text-[#5c7c3b]"
                       : isScrolled
                       ? "text-gray-800 hover:text-[#5c7c3b]"
-                      : "text-black hover:text-[#5c7c3b]"
+                      : "text-white hover:text-[#5c7c3b]"
                   }`}
                 >
                   <span>{link.label}</span>

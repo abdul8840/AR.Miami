@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Logo from '../../assets/images/artaLogo.png';
+import BGImage from '../../assets/images/gallery4.jpg';
 
 const HomePageHero = ({ isMenuOpen }) => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -38,7 +39,7 @@ const HomePageHero = ({ isMenuOpen }) => {
     // Final header position values
     const finalWidth = 150;
     const finalTop = 50;
-    const finalLeft = '17%'; // Matches header logo's !mx-5 (approx)
+    const finalLeft = '17%';
     const finalOpacity = 1;
 
     // Initial hero position values
@@ -48,7 +49,7 @@ const HomePageHero = ({ isMenuOpen }) => {
     const initialOpacity = 1;
 
     // Adjust z-index to ensure logo is below mobile menu
-    const zIndex = isMenuOpen ? 30 : 60; // Mobile menu is z-40
+    const zIndex = isMenuOpen ? 30 : 60;
 
     if (isScrollingDown) {
       return {
@@ -58,8 +59,9 @@ const HomePageHero = ({ isMenuOpen }) => {
         top: `${initialTop + (finalTop - initialTop) * scrollProgress}px`,
         left: scrollProgress < 0.5 ? initialLeft : finalLeft,
         transform: `translate(-50%, -50%) scale(${1 - 0.2 * scrollProgress})`,
-        transition: 'all 0.1s linear',
+        transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
         zIndex,
+        filter: `drop-shadow(0 2px 8px rgba(0, 0, 0, ${0.1 * scrollProgress}))`,
       };
     } else {
       return {
@@ -69,8 +71,9 @@ const HomePageHero = ({ isMenuOpen }) => {
         top: `${finalTop + (initialTop - finalTop) * (1 - scrollProgress)}px`,
         left: scrollProgress > 0.5 ? finalLeft : initialLeft,
         transform: `translate(-50%, -50%) scale(${0.8 + 0.2 * (1 - scrollProgress)})`,
-        transition: 'all 0.1s linear',
+        transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
         zIndex,
+        filter: `drop-shadow(0 2px 8px rgba(0, 0, 0, ${0.1 * (1 - scrollProgress)}))`,
       };
     }
   };
@@ -82,15 +85,46 @@ const HomePageHero = ({ isMenuOpen }) => {
       {/* Hero Section with Animated Logo */}
       <section
         ref={heroRef}
-        className="relative bg-gradient-to-b from-green-50 to-green-100 h-screen flex items-center justify-center overflow-hidden"
+        className="relative h-screen flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: `url(${BGImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
       >
+        {/* Light blur overlay with white and soft green */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: `linear-gradient(to bottom, 
+              rgba(255, 255, 255, ${0.7 - 0.5 * scrollProgress}), 
+              rgba(220, 240, 230, ${0.8 - 0.6 * scrollProgress}))`,
+            backdropFilter: `blur(${8 - 6 * scrollProgress}px)`,
+            transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+        ></div>
+
+        {/* Subtle green tint overlay */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: `linear-gradient(135deg, 
+              rgba(230, 245, 235, ${0.4 - 0.3 * scrollProgress}), 
+              rgba(220, 240, 230, ${0.5 - 0.4 * scrollProgress}))`,
+            opacity: 0.7 - 0.5 * scrollProgress,
+            transition: 'all 0.4s ease',
+            mixBlendMode: 'soft-light'
+          }}
+        ></div>
+
         {/* Animated Logo */}
         {scrollProgress < 1 && (
           <img
             ref={animatedLogoRef}
             src={Logo}
             style={logoStyles}
-            className="transition-all duration-100"
+            className="transition-all duration-200 will-change-transform"
             alt="Arta Logo"
           />
         )}
