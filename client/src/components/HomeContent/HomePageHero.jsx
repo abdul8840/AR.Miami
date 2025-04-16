@@ -94,7 +94,7 @@ const HomePageHero = ({ isMenuOpen }) => {
         }}
       >
         {/* Light blur overlay with white and soft green */}
-        <div 
+        <div
           className="absolute inset-0"
           style={{
             background: `linear-gradient(to bottom, 
@@ -106,15 +106,12 @@ const HomePageHero = ({ isMenuOpen }) => {
         ></div>
 
         {/* Subtle green tint overlay */}
-        <div 
+        <div
           className="absolute inset-0"
           style={{
-            background: `linear-gradient(135deg, 
-              rgba(230, 245, 235, ${0.4 - 0.3 * scrollProgress}), 
-              rgba(220, 240, 230, ${0.5 - 0.4 * scrollProgress}))`,
-            opacity: 0.7 - 0.5 * scrollProgress,
-            transition: 'all 0.4s ease',
-            mixBlendMode: 'soft-light'
+            background: `rgba(0, 0, 0, ${0.3 - 0.2 * scrollProgress})`,
+            backdropFilter: `blur(${4 - 2 * scrollProgress}px)`,
+            transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
           }}
         ></div>
 

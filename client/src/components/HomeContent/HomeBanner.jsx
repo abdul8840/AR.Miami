@@ -10,7 +10,7 @@ const HomeBanner = () => {
     <section className='!mt-[-100px] bg-gray-100 py-10 z-100'>
       <div className="container">
         <div className="flex flex-col lg:flex-row justify-between items-center">
-          <div className="bg-white/30 backdrop-blur-md shadow-md !p-5 !py-7 w-full lg:w-1/2 order-2 lg:order-1">
+          <div className="bg-white/30 backdrop-blur-md shadow-md !p-5 !py-7 h-[470px] sm:h-[420px] w-full lg:w-1/2 order-2 lg:order-1">
             <p className="text-lg text-[#5c7c3b] font-semibold mb-2">Building Dreams, One Brick at a Time</p>
 
             <h1 className="text-3xl font-bold text-gray-900 mb-4">Transforming Homes, Elevating Lifestyles</h1>

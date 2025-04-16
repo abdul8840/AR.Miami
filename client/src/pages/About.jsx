@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import AboutBanner from '../components/AboutContent/AboutBanner';
 import OurStory from '../components/AboutContent/OurStory';
 import Experience from '../components/Others/Experience';
-import OurTeam from '../components/AboutContent/OurTeam';
 import Hero from '../components/Others/Hero';
 import { aboutHero } from '../assets/data/heroData';
 import Certification from '../components/AboutContent/Certification';
@@ -30,7 +29,6 @@ const About = () => {
       <Certification />
       <Experience />
       <OurStory />
-      <OurTeam />
       <Subscribe />
     </div>
   );
