@@ -12,14 +12,10 @@ const About = () => {
   return (
     <div>
       <Helmet>
-        <title>Best Tech Repair in Miami</title>
+        <title>About Advance Construction & Remodeling | Miami’s Trusted Contractors</title>
         <meta 
           name="description" 
-          content="Learn about AR.Miami — our story, mission, and dedicated team. We specialize in website development, SEO, and digital solutions to grow your business." 
-        />
-        <meta 
-          name="keywords" 
-          content="about us, AR.Miami, web development, digital marketing, SEO, e-commerce solutions, team, company story" 
+          content="Learn about Advance Construction & Remodeling—Miami’s experts in home renovations, interior design, property management, and roof-to-roof construction. Experience, passion, results." 
         />
         <meta name="robots" content="index, follow" />
       </Helmet>

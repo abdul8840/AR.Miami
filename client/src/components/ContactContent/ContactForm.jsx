@@ -87,28 +87,12 @@ const ContactForm = () => {
                 <FaFacebook className="w-6 h-6" />
               </Link>
               <Link
-                to="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="!p-3 bg-gray-800 text-white rounded-full hover:bg-[#5c7c3b] transition-all transform hover:scale-110"
-              >
-                <FaTwitter className="w-6 h-6" />
-              </Link>
-              <Link
                 to="https://www.instagram.com/advance_remodeling?igsh=b3VhaWl0bDVtMmlv&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="!p-3 bg-gray-800 text-white rounded-full hover:bg-[#5c7c3b] transition-all transform hover:scale-110"
               >
                 <FaInstagram className="w-6 h-6" />
-              </Link>
-              <Link
-                to="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="!p-3 bg-gray-800 text-white rounded-full hover:bg-[#5c7c3b] transition-all transform hover:scale-110"
-              >
-                <FaLinkedin className="w-6 h-6" />
               </Link>
             </div>
           </div>

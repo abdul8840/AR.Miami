@@ -33,7 +33,7 @@ const Footer = () => {
             </p>
             <div className="flex !space-x-4">
               <Link
-                to="https://facebook.com"
+                to="https://www.facebook.com/share/1HYmusZRqb/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-[#5c7c3b] transition-all transform hover:scale-110"
@@ -41,28 +41,12 @@ const Footer = () => {
                 <FaFacebook className="w-6 h-6" />
               </Link>
               <Link
-                to="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-[#5c7c3b] transition-all transform hover:scale-110"
-              >
-                <FaTwitter className="w-6 h-6" />
-              </Link>
-              <Link
-                to="https://instagram.com"
+                to="https://www.instagram.com/advance_remodeling?igsh=b3VhaWl0bDVtMmlv&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-[#5c7c3b] transition-all transform hover:scale-110"
               >
                 <FaInstagram className="w-6 h-6" />
-              </Link>
-              <Link
-                to="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-[#5c7c3b] transition-all transform hover:scale-110"
-              >
-                <FaLinkedin className="w-6 h-6" />
               </Link>
             </div>
           </div>

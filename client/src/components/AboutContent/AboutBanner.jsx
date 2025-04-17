@@ -2,11 +2,25 @@ import React from 'react';
 import AbtBanner from '../../assets/images/constructionTeam.jpg';
 import { Link } from 'react-router-dom';
 import { FaHammer, FaHome, FaPaintRoller, FaRulerCombined, FaTools } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const AboutBanner = () => {
   const phoneNumber = '+17862109819';
-  
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false
+  });
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
   // Background animation icons with motion variants
   const backgroundIcons = [
     { 
@@ -36,7 +50,7 @@ const AboutBanner = () => {
     },
   ];
 
-  // Animation variants for text elements
+  // Animation variants for scroll-triggered effects
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -49,25 +63,43 @@ const AboutBanner = () => {
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
-        ease: "easeOut"
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+        mass: 0.5
+      }
+    }
+  };
+
+  const titleVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 120,
+        damping: 10
       }
     }
   };
 
   const imageVariants = {
-    hidden: { scale: 0.9, opacity: 0 },
+    hidden: { scale: 0.95, opacity: 0, x: 50 },
     visible: {
       scale: 1,
       opacity: 1,
+      x: 0,
       transition: {
-        duration: 0.8,
-        ease: "easeOut"
+        type: "spring",
+        stiffness: 80,
+        damping: 10,
+        mass: 0.5
       }
     }
   };
@@ -75,9 +107,9 @@ const AboutBanner = () => {
   return (
     <motion.section 
       className='!py-12 sm:!py-20 relative overflow-hidden'
+      ref={ref}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      animate={controls}
     >
       {/* Background animated icons */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -88,7 +120,7 @@ const AboutBanner = () => {
             style={icon.position}
             animate={icon.animation}
             transition={{
-              duration: 10 + index * 2,
+              duration: 15 + index * 2,
               repeat: Infinity,
               repeatType: "reverse",
               ease: "easeInOut",
@@ -107,7 +139,7 @@ const AboutBanner = () => {
         >
           <motion.h2 
             className="text-3xl sm:text-4xl font-bold text-gray-800 !mb-4 relative inline-block"
-            variants={itemVariants}
+            variants={titleVariants}
           >
             <span className="absolute -left-8 sm:-left-12 top-1/2 transform -translate-y-1/2 w-[20px] sm:w-[50px] h-[3px] bg-[#5c7c3b]"></span>
             About Us
@@ -115,7 +147,7 @@ const AboutBanner = () => {
           </motion.h2>
           <motion.p 
             className="text-base sm:text-lg text-gray-600 !mb-8 sm:!mb-12"
-            variants={itemVariants}
+            variants={titleVariants}
           >
             Want to know more about us?
           </motion.p>
@@ -176,8 +208,11 @@ const AboutBanner = () => {
                 href={`tel:${phoneNumber}`}
                 className="border-2 !py-3 !px-6 border-[#5c7c3b] text-white font-semibold rounded-lg cursor-pointer bg-[#5c7c3b] hover:bg-white hover:text-[#5c7c3b] transition-all duration-300 text-center shadow-md hover:shadow-lg transform hover:-translate-y-1"
                 variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)"
+                }}
+                whileTap={{ scale: 0.98 }}
               >
                 Call Now
               </motion.a>
@@ -186,8 +221,11 @@ const AboutBanner = () => {
                 <Link
                   to="/contact"
                   className="border-2 !py-3 !px-6 border-[#5c7c3b] text-[#5c7c3b] font-semibold rounded-lg cursor-pointer hover:bg-[#5c7c3b] hover:text-white transition-all duration-300 text-center shadow-md hover:shadow-lg transform hover:-translate-y-1"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ 
+                    scale: 1.05,
+                    boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)"
+                  }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   Get Free Quotes
                 </Link>
@@ -195,15 +233,22 @@ const AboutBanner = () => {
             </motion.div>
           </motion.div>
 
-          {/* Image */}
+          {/* Image with enhanced scroll animation */}
           <motion.div 
             className="!p-4 w-full lg:w-1/2 order-1 lg:order-2 relative group"
             variants={imageVariants}
           >
             <motion.div 
               className="relative overflow-hidden rounded-lg !shadow-xl"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.5 }}
+              whileHover={{ 
+                scale: 1.02,
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)"
+              }}
+              transition={{ 
+                duration: 0.5,
+                type: "spring",
+                stiffness: 100
+              }}
             >
               <img 
                 src={AbtBanner} 

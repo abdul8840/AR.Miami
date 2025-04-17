@@ -1,9 +1,60 @@
 import React from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import OurStoryImage1 from '../../assets/images/consTeam.jpg'; 
 import OurStoryImage2 from '../../assets/images/values.jpg'; 
 import OurStoryImage3 from '../../assets/images/mission.jpg'; 
 
 const OurStory = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: true
+  });
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10
+      }
+    }
+  };
+
+  const imageVariants = {
+    hidden: { x: (index) => (index % 2 === 0 ? 100 : -100), opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 60,
+        damping: 10
+      }
+    }
+  };
+
   const sections = [
     {
       title: 'Our Story',
@@ -37,47 +88,71 @@ const OurStory = () => {
       content: [
         "In anticipation of a common future, we recognize that every building deserves to be treated as a masterful outcome combining art and engineering. For this reason, we try to become a leading model in the industry of construction and design, embracing innovation, sustainability, and customer satisfaction. We want to do more than just build buildings; we want to build crafts and create a legacy for creativity and care.",
       ],
-      image: OurStoryImage1, // Replace with your image path
+      image: OurStoryImage1,
     },
   ];
 
   return (
-    <section className="!py-12 md:!py-18">
+    <motion.section 
+      ref={ref}
+      className="!py-12 md:!py-18"
+      initial="hidden"
+      animate={controls}
+    >
       <div className="!px-5 lg:px-0">
         {sections.map((section, index) => (
-          <div
+          <motion.div
             key={index}
-            className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center`}
+            className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center !mb-16`}
+            variants={containerVariants}
           >
             {/* Image */}
-            <div className="lg:w-1/2">
+            <motion.div 
+              className="lg:w-1/2"
+              custom={index}
+              variants={imageVariants}
+            >
               <img
                 src={section.image}
                 alt={section.title}
                 className="w-full h-auto shadow-lg"
+                loading="lazy"
               />
-            </div>
+            </motion.div>
 
             {/* Content */}
-            <div className="lg:w-1/2 container !px-0 !py-10 lg:!p-5">
-              <div className="max-w-[500px] !mx-auto ">
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#5c7c3b] !mb-4">
+            <motion.div 
+              className="lg:w-1/2 container !px-0 !py-10 lg:!p-5"
+              variants={containerVariants}
+            >
+              <motion.div 
+                className="max-w-[500px] !mx-auto"
+                variants={itemVariants}
+              >
+                <motion.h2 
+                  className="text-3xl sm:text-4xl font-bold text-[#5c7c3b] !mb-4"
+                  variants={itemVariants}
+                >
                   {section.title}
-                </h2>
-                <span className="inline-block w-[100px] h-[3px] bg-[#5c7c3b] !mb-2.5"></span>
+                </motion.h2>
+                <motion.span 
+                  className="inline-block w-[100px] h-[3px] bg-[#5c7c3b] !mb-2.5"
+                  variants={itemVariants}
+                />
                 {section.content.map((paragraph, i) => (
-                  <p
+                  <motion.p
                     key={i}
                     className="text-sm sm:text-[16px] text-gray-600 !mb-4"
+                    variants={itemVariants}
                     dangerouslySetInnerHTML={{ __html: paragraph }}
-                  ></p>
+                  ></motion.p>
                 ))}
-              </div>
-            </div>
-          </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
